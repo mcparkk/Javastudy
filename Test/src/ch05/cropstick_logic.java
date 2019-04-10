@@ -1,12 +1,9 @@
 package ch05;
 
-public class crop_stick {
+public class cropstick_logic {
 	public static void main(String[] args) {
 		int[] stick = { 5, 4, 4, 2, 2, 8 };
 		int count = 0;
-		
-	while(true) 
-	{
 		// 1. 0보다 큰 배열 요소의 개수를 출력
 		for (int i = 0; i < stick.length; i++) 
 		{
@@ -16,12 +13,6 @@ public class crop_stick {
 				count++;
 			}
 		}
-		System.out.println(count);
-		if(count <= 1)
-		{
-			break;
-		}
-	}
 		int min = 0;
 		min = Integer.MAX_VALUE; 	// 최솟값
 		// 2. 배열 요소중에서 0을 제외하고 가장 적은 수를 찾아냄
@@ -49,4 +40,5 @@ public class crop_stick {
 //			}
 		
 	}
+}
 }
