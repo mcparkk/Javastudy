@@ -35,7 +35,7 @@ public class Network1 {
 			JSONArray arr = new JSONArray(result);
 			for (int i = 0; i < arr.length(); i++) {
 				JSONObject obj = arr.getJSONObject(i);
-				int age = obj.getInt("age");
+				int age = obj. getInt("age");
 				String name = obj.getString("name");
 				System.out.println(age + " " + name);
 			}

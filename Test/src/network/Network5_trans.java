@@ -5,7 +5,7 @@ import com.ggoreb.kakao_api.TranslateUtil;
 public class Network5_trans {
 	public static void main(String[] args) {
 		TranslateUtil tu = new TranslateUtil("0a7c5408897da72ef62213f279237f86");
-		String r = tu.sendText("kr", "en", "ÁÖ¹®ÇÏ½Å À½·á ³ª¿Ô½À´Ï´Ù.");
+		String r = tu.sendText("kr", "en", "ì£¼ë¬¸í•˜ì‹  ìŒë£Œ ë‚˜ì™”ìŠµë‹ˆë‹¤.");
 		System.out.println(r);
 	}
 }

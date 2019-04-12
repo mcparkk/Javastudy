@@ -18,15 +18,15 @@ public class ArrayListExam {
 		
 		
 		
-		String[] arr = new String[3];
-		arr[0] = "kim";
-		String value = arr[0];
-		
-		ArrayList<Integer> list2 = new ArrayList<Integer>();
-		
-		ArrayList list = new ArrayList<String>();
-		list.add("kim");
-		String value2 = (String) list.get(0);
-		
+//		String[] arr = new String[3];
+//		arr[0] = "kim";
+//		String value = arr[0];
+//		
+//		ArrayList<Integer> list2 = new ArrayList<Integer>();
+//		
+//		ArrayList list = new ArrayList<String>();
+//		list.add("kim");
+//		String value2 = (String) list.get(0);
+//		
 	}
 }

@@ -11,45 +11,43 @@ import java.net.URLConnection;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class Network4 {
+public class NetworkTest {
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCLkoB0Bwiiem7_uVKZX9soG3IFJDqIMrw&q=원피스/");
+			URL url = new URL("https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCLkoB0Bwiiem7_uVKZX9soG3IFJDqIMrw&q=%EC%9B%90%ED%94%BC%EC%8A%A4");
 			URLConnection con = url.openConnection();
-			con.addRequestProperty("Authorization", "KakaoAK 0a7c5408897da72ef62213f279237f86");
-			
+
 			InputStream in = con.getInputStream();
 			InputStreamReader isr = new InputStreamReader(in, "utf-8");
 			BufferedReader reader = new BufferedReader(isr);
 			String result = "";
-			while(true) {
+
+			while (true) {
 				String data = reader.readLine();
-				if(data == null) break;
+
+				if (data == null)
+					break;
 				result += data;
-//				System.out.println(data);
+				// System.out.println(data);
 			}
-//			System.out.println(result);
-			JSONObject obj = new JSONObject(result);
-			
-			
-			
-			JSONArray items = obj.getJSONArray("items");
-			for(int i = 0; i < items.length(); i++) {
-				JSONObject item = items.getJSONObject(i);
-				JSONObject id = item.getJSONObject("id");
-				String videoId = id.getString("videdId");
-				System.out.println(videoId);
-			}
+			System.out.println(result);
+			//JSON 문자열을 JSON 객체로 변경
+//			JSONArray arr = new JSONArray(result);
+//			for (int i = 0; i < arr.length(); i++) {
+//				JSONObject obj = arr.getJSONObject(i);
+//				int age = obj.getInt("age");
+//				String name = obj.getString("name");
+//				System.out.println(age + " " + name);
+//			}
+			//JSONObject
 			
 			
 		} catch (MalformedURLException e) {
+
 			e.printStackTrace();
 		} catch (IOException e) {
+
 			e.printStackTrace();
 		}
 	}
 }
-
-
-
-
